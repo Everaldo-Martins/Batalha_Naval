@@ -92,7 +92,7 @@ public class BatalhaNaval {
 
 			char x = input.next().toLowerCase().charAt(0);
 
-			if(Character.isDigit(x) && Character.getNumericValue(x) <= 5) {
+			if(Character.isDigit(x) && Character.getNumericValue(x) <= 5 && Character.getNumericValue(x) > 0) {
 				add.position[i] = Character.getNumericValue(x) - 1;
 			}
 			else if(Character.isLetter(x)) {
@@ -104,7 +104,7 @@ public class BatalhaNaval {
 			else {
 				line_left();
 				add.position[i] = (int) (Math.random() * 5);
-				System.out.printf("-- \u001B[31mOopss! O valor informado é maior que 5.%5s\u001B[0m--\n-- \u001B[31mSerá trocado de forma aleatória por %d.%6s\u001B[0m--\n", "", add.position[i]+1, "");
+				System.out.printf("-- \u001B[31mOopss! O valor informado %s.%5s\u001B[0m--\n-- \u001B[31mSerá trocado de forma aleatória por %d.%6s\u001B[0m--\n", Character.getNumericValue(x) > 5 ? "é maior que 5" : "é menor que 1", "", add.position[i]+1, "");
 				line_left();
 			}
 		}
