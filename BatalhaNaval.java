@@ -25,18 +25,18 @@ public class BatalhaNaval {
 	}
 
 	public static int[] numSort(){
-        int[] num = new int[3];
-        num[0] = (int) (Math.random() * 5);
+        int[] list = new int[3];
+        list[0] = (int) (Math.random() * 5);
 
         do {
-            num[1] = (int) (Math.random() * 5);
-        } while (num[0] == num[1]);
+            list[1] = (int) (Math.random() * 5);
+        } while (list[0] == list[1]);
 
         do {
-            num[2] = (int) (Math.random() * 5);
-        }while (num[0] == num[2] || num[1] == num[2]);
+            list[2] = (int) (Math.random() * 5);
+        }while (list[0] == list[2] || list[1] == list[2]);
 
-        return num;
+        return list;
     }
 
 	public static void initTb(Data add) {
@@ -47,9 +47,9 @@ public class BatalhaNaval {
 
   		//Sort the ships.
         for(int j = 0; j < add.ships.length-1; j++){
-            int[] num = numSort();
+            int[] ln = numSort();
             for(int i = 0; i < add.ships.length; i++)
-            	add.ships[i][j] = num[i];
+            	add.ships[i][j] = ln[i];
         }
 	}
 
