@@ -24,7 +24,7 @@ public class BatalhaNaval {
 		line_left();
 	}
 
-	public static int[] numSort(){
+	public static int[] nSort(){
         int[] list = new int[3];
         list[0] = (int) (Math.random() * 5);
 
@@ -47,7 +47,7 @@ public class BatalhaNaval {
 
   		//Sort the ships.
         for(int j = 0; j < add.ships.length-1; j++){
-            int[] ln = numSort();
+            int[] ln = nSort();
             for(int i = 0; i < add.ships.length; i++)
             	add.ships[i][j] = ln[i];
         }
