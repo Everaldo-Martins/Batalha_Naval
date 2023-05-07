@@ -24,30 +24,33 @@ public class BatalhaNaval {
 		line_left();
 	}
 
-	public static Data numCheck(Data add) {
-		for (int i = 0; i < add.ships.length; i++) {
-			for (int j = 0; j < i; j++) {
-				if (add.ships[i][0] == add.ships[j][0] && add.ships[i][1] == add.ships[j][1]) {
-					do {
-						add.ships[i][j] = (int) (Math.random() * 5);
-					} while (add.ships[i][0] == add.ships[j][0] && add.ships[i][1] == add.ships[j][1]);
-				}
-			}
-		}
-		return add;
-	}
+	public static int[] numSort(){
+        int[] num = new int[3];
+        num[0] = (int) (Math.random() * 5);
+
+        do {
+            num[1] = (int) (Math.random() * 5);
+        } while (num[0] == num[1]);
+
+        do {
+            num[2] = (int) (Math.random() * 5);
+        }while (num[0] == num[2] || num[1] == num[2]);
+
+        return num;
+    }
 
 	public static void initTb(Data add) {
 		//Start the table.
   		for (int i = 0; i < add.board.length; i++)
 			for (int j = 0; j < add.board.length; j++)
 				add.board[i][j] = 0;
-  		//Sort the ships.
-  		for (int i = 0; i < add.ships.length; i++)
-  			for (int j = 0; j < add.ships.length - 1; j++)
-  				add.ships[i][j] = (int) (Math.random() * 5);
 
-		numCheck(add);
+  		//Sort the ships.
+        for(int j = 0; j < add.ships.length-1; j++){
+            int[] num = numSort();
+            for(int i = 0; i < add.ships.length; i++)
+            	add.ships[i][j] = num[i];
+        }
 	}
 
 	public static void displayBoard(Data det) {
