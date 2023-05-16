@@ -1,6 +1,6 @@
 # Batalha Naval (Java)
 ### Sobre o projeto:
-_Projeto desenvolvido com trabalho da unidade I, da disciplina Laboratório de Programação II, do curso_ **Ciências da Computação, campus VII - Patos/PB**.
+_Projeto desenvolvido com trabalho da unidade I, da disciplina Laboratório de Programação II, do curso_ **Ciências da Computação, Universidade Estadual da Paraíba - UEPB - campus VII - Patos/PB**.
 
 _O Projeto foi desenvolvido utilizando o conteúdo ministrado em aula, e tinha os seguintes pré-requisitos:_
 
